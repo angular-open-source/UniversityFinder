@@ -24,7 +24,11 @@ export class AppComponent implements OnInit{
   private hipoLabsApi = inject(HipoLabsApiService);
   private logoApi = inject(LogoApiService);
 
-  ngOnInit(){
+  /**
+   * @summary Initializes the component by fetching the list of universities and updating their domain logos.
+   * @author Paul Sulca
+   */
+  ngOnInit(): void {
     this.hipoLabsApi.getUniversities().subscribe(universities => {
       this.universities = universities;
       this.universities.forEach(university => university.domainLogo = this.logoApi.getUrlToLogo(university));

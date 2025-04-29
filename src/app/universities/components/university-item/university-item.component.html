@@ -1,14 +1,14 @@
-<mat-card>
-  <img mat-card-image [src] = "university.domainLogo" [alt]="university.universityName"/>
-  <mat-card-header>
-    <mat-card-title>{{university.universityName}}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>Pais: {{university.countryName}}</p>
-    <p>Codigo de Pais: {{university.countryCode}}</p>
-    <p>Dominio: {{university.domain}}</p>
-    <a [href] = "university.websiteUrl" class="action-button" color="primary"
-       mat-button
-       target="_blank">{{ 'card.read-more' | translate }}</a>
-  </mat-card-content>
+<mat-card class="card">
+    <img mat-card-image [src]="university.domainLogo" [alt]="university.universityName" class="image"/>
+    <mat-card-header class="header">
+        <mat-card-title>{{ university.universityName }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+        <p>Pais: {{ university.countryName }}</p>
+        <p>Codigo de Pais: {{ university.countryCode }}</p>
+        <p>Dominio: {{ university.domain }}</p>
+        <a [href]="university.websiteUrl" class="action-button" color="primary"
+           mat-button
+           target="_blank">{{ 'card.read-more' | translate }}</a>
+    </mat-card-content>
 </mat-card>
